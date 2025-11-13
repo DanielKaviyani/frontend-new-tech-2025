@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useActionState, Suspense } from 'react'
+// import { list } from './actions/post'
+// import Posts from './components/posts';
+import Products from './components/Products';
+// import CreatePostForm from './components/CreatePostForm';
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [name, setName] = useState("");
+  // const [error, setError] = useState(null);
+  // const [isPending, setIsPending] = useState(false);
+
+  // const handleSubmit = async () => {
+  //   setIsPending(true);
+  //   const error= await updateName(name);
+  //   setIsPending(false);
+  //   if(error){
+  //     setError(error);
+  //   }
+  // }
+
+  const [error, submitAction, isPending] = useActionState(async (previousState, formData) => {
+    // Add your form handling logic here
+    return null;
+  }, null)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <h1>Create Post</h1>
+      <Products />
+      {/* <CreatePostForm /> */}
+      {/* <Suspense fallback={<div>Loading Posts...</div>}> */}
+        {/* <Posts postsPromise={list()} /> */}
+      {/* </Suspense> */}
+    </div>
   )
+  
 }
 
 export default App
