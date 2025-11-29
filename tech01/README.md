@@ -24,12 +24,13 @@ Master React 19.2 features including Server Components, Actions, new hooks like 
 - [ ] Optimistic updates with useOptimistic
 - [ ] **Project**: Blog with Server Components and Server Actions
 
-### Week 3: Advanced Hooks & Performance
+### Week 3: Advanced Hooks, Performance & Auth
 - [ ] useEffectEvent for separating events from effects
 - [ ] Activity component for component lifecycle management
 - [ ] Enhanced concurrent features with Actions
+- [ ] Auth0 integration patterns for secure data flows
 - [ ] Performance optimization with React Compiler
-- [ ] **Project**: Advanced search interface with Activity and performance monitoring
+- [ ] **Project**: Advanced search interface with Auth0-protected views, Activity, and performance monitoring
 
 ### Week 4: Production-Ready Patterns
 - [ ] Partial Pre-rendering for faster load times
